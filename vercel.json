@@ -33,5 +33,6 @@
         "DB_DATABASE": "renobinus_welcomesee",
         "DB_USERNAME": "renobinus_welcomesee",
         "DB_PASSWORD": "badcbf7d3d2c4caa79e34463026071bd8fca799a"
-    }
+    },
+    "outputDirectory": "public"
 }
