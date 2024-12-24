@@ -1,5 +1,3 @@
-@extends('layouts.main')
-
 <!-- Correct CSS Styling -->
 <style>
 /* Environment Badge Styling */
@@ -30,6 +28,44 @@
 .badge {
     margin-right: 5px;
     font-size: 0.9rem;
+}
+
+/* Pagination Styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination .page-item {
+    margin: 0 5px;
+}
+
+.pagination .page-link {
+    border: 1px solid #dee2e6;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #007bff;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.pagination .page-link:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+}
+
+.pagination .page-link:focus {
+    box-shadow: none;
+    outline: none;
 }
 </style>
 
