@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Models\Organization;
+use App\Models\organization;
 use Illuminate\Http\Request;
 
 class OrganizationController extends Controller
@@ -9,7 +9,7 @@ class OrganizationController extends Controller
     // Display all organizations
     public function index(Request $request)
     {
-        $organizations = Organization::paginate(5); // Paginate for better UX
+        $organizations = organization::paginate(5); // Paginate for better UX
         $title = 'Daftar Organisasi';
         return view('organisasi', compact('organizations', 'title'));
     }
