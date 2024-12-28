@@ -1,3 +1,4 @@
+@extends('layouts.main')
 <!-- Correct CSS Styling -->
 <style>
 /* Environment Badge Styling */
