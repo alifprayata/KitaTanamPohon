@@ -59,14 +59,20 @@
         margin-top: 20px;
     }
     .page-item.active .page-link {
-        background-color: #007bff;
-        border-color: #007bff;
+        background-color: #28a745;  /* Changed to green */
+        border-color: #28a745;     /* Changed to green */
+        color: #ffffff;
     }
     .page-link {
-        color: #007bff;
+        color: #28a745;            /* Changed to green */
     }
     .page-link:hover {
-        color: #0056b3;
+        background-color: #28a745; /* Changed to green */
+        border-color: #218838;     /* Darker green for border */
+        color: #ffffff;
+    }
+    .page-link:focus {
+        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); /* Green shadow */
     }
 </style>
 @endpush
