@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Models\organization;
+use App\Models\organization as Organization;
 use Illuminate\Http\Request;
 
 class OrganizationController extends Controller
@@ -9,7 +9,7 @@ class OrganizationController extends Controller
     // Display all organizations
     public function index(Request $request)
     {
-        $organizations = organization::paginate(5); // Paginate for better UX
+        $organizations = Organization::paginate(5); // Paginate for better UX
         $title = 'Daftar Organisasi';
         return view('organisasi', compact('organizations', 'title'));
     }
@@ -18,14 +18,14 @@ class OrganizationController extends Controller
     public function handleSearch(Request $request)
     {
         $search = $request->input('keyword');
-        $organizations = organization::where('name', 'LIKE', '%' . $search . '%')
+        $organizations = Organization::where('name', 'LIKE', '%' . $search . '%')
             ->paginate(3)->withQueryString();
         $title = 'Cari Organisasi';
         return view('organisasi', compact('organizations', 'title', 'search'));
     }
         public function show($id)
     {
-        $organization = organization::findOrFail($id);
+        $organization = Organization::findOrFail($id);
 
         return view('aktivitas.detail', [
             'organization' => $organization,
