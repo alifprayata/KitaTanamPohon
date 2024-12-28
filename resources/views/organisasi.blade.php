@@ -45,7 +45,7 @@
         </div>
 
         {{-- Modified pagination section --}}
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center pagination">
             {{ $organizations->links('pagination::bootstrap-4') }}
         </div>
     @endif
