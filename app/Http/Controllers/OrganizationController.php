@@ -18,14 +18,14 @@ class OrganizationController extends Controller
     public function handleSearch(Request $request)
     {
         $search = $request->input('keyword');
-        $organizations = Organization::where('name', 'LIKE', '%' . $search . '%')
+        $organizations = organization::where('name', 'LIKE', '%' . $search . '%')
             ->paginate(3)->withQueryString();
         $title = 'Cari Organisasi';
         return view('organisasi', compact('organizations', 'title', 'search'));
     }
         public function show($id)
     {
-        $organization = Organization::findOrFail($id);
+        $organization = organization::findOrFail($id);
 
         return view('aktivitas.detail', [
             'organization' => $organization,
